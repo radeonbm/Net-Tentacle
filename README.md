@@ -60,7 +60,9 @@
 
 ## 使用边界与反馈
 
-本轮测试中曾有一次闪退反馈，目前原因尚未确认，不宣称已修复。若再次遇到，请保留复现步骤，可从“设置 → 提交 Bug”手动提交本地诊断；不会自动发送邮件。设备与线材兼容性仍需按实际组合确认。
+2026-10-15 文案修订（构建 20261015.1）：只读入口调整为“创建只读会话”，限时托管说明与完整交互终端的实际权限保持一致，功能和操作流程不变。
+
+远程协助期间请留意手机的后台运行与电池限制。此前疑似闪退的反馈，用户后续认为可能与返回手势退出和后台限制有关，尚未确认为崩溃。若再次遇到异常，可从“设置 → 提交 Bug”手动提交本地诊断；不会自动发送邮件。设备与线材兼容性仍需按实际组合确认。
 
 AI 建议下发与完整交互终端是两条不同路径：前者有建议核对、风险检查和备份流程；后者按键直接传给设备，不承诺逐条拦截危险命令，也不应当作完整的命令审计系统。
 
@@ -84,6 +86,6 @@ Version **0.2.0** adds browser-based remote assistance and terminal stability im
 
 Unplugging Console disables remote input. After plugging it back in, tap Connect on the phone; remote operation can continue only while the session and its authorization remain valid. Phone and computer network-loss notifications each took about ten seconds in field testing; actual timing varies. Ending remote access does not disconnect an otherwise-connected local Console. The relay does not write terminal content to logs or disk; approved guests can see the actual terminal output.
 
-One crash was reported during testing and remains undiagnosed. This version does not claim to fix it. Reports are sent manually by the user, never automatically.
+The October 15 wording revision (build 20261015.1) removes the test label from read-only session creation and clarifies full terminal access in timed mode. Functionality is unchanged. An earlier suspected crash was later reported as possibly related to gesture exit and background battery restrictions; a crash has not been confirmed. Reports are sent manually by the user, never automatically.
 
 Use only on authorized devices. Choose an approved AI service, review outgoing information and check generated commands before sending. Compatibility depends on the phone, serial adapter and network device.
